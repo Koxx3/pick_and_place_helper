@@ -20,9 +20,11 @@ You must center your design in the lower right corner of the PCB diagram.
 ## In EasyEDA
 
 Export SVG :
+
 ![image](https://user-images.githubusercontent.com/11454444/161438143-bd530f32-b682-42bb-b1e7-e23d3950a69d.png)
 
 I advise those settings :
+
 ![image](https://user-images.githubusercontent.com/11454444/161438158-d4c78f8e-e473-462c-8875-ffcdbf9ca1c1.png)
 
 ## Shell command
