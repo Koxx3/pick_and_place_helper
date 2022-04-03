@@ -17,10 +17,14 @@ You must center your design in the lower right corner of the PCB diagram.
 
 # Usage
 
-`python pick_and_place_helper.py <path_to_svg_pcb_file>.svg <path_to_pick_and_place_file>.csv`
+```
+python pick_and_place_helper.py <path_to_svg_pcb_file>.svg <path_to_pick_and_place_file>.csv
+```
 
 You can also filter desingations with a regular expression :
-`python pick_and_place_helper.py <path_to_svg_pcb_file>.svg <path_to_pick_and_place_file>.csv "^[R|C]d+$"`
+```
+python pick_and_place_helper.py <path_to_svg_pcb_file>.svg <path_to_pick_and_place_file>.csv "^[R|C]d+$"
+```
 
 It will output only components with designation starting with R (resistors) and C (capacitors).
 
