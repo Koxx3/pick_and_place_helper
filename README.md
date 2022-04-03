@@ -27,10 +27,10 @@ It will output only components with designation starting with R (resistors) and 
 
 # Results
 
-It output a PDF next to your SVG file with one component type by page.
-You your printer options, you can adjust multiple pages on a A4 pages if you want.
-
+It outputs a PDF next to your SVG file.
 Each page is for a specific component (same footprint, same type, same value).
+
+You your printer options, you can adjust multiple pages on a A4 pages if you want.
 
 Check example folder.
 
