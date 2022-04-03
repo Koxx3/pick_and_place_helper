@@ -7,6 +7,11 @@ Tested only with EasyEDA exports (SVG and pick&place CSV).
 
 It requires Python 3.
 
+Install python libraries :
+```
+pip install -r requirements.txt
+```
+
 You must also install [Uniconverter](requires_install\uniconvertor-2.0rc5-win64_headless.msi)
 
 # EasyEDA Requirements
