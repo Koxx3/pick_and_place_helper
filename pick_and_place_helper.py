@@ -24,6 +24,21 @@ def crop_center(pil_img, crop_width, crop_height):
                          (img_width + crop_width) // 2,
                          (img_height + crop_height) // 2))
 
+def set_dll_search_path():
+   # Python 3.8 no longer searches for DLLs in PATH, so we have to add
+   # everything in PATH manually. Note that unlike PATH add_dll_directory
+   # has no defined order, so if there are two cairo DLLs in PATH we
+   # might get a random one.
+   if os.name != "nt" or not hasattr(os, "add_dll_directory"):
+       return
+   for p in os.environ.get("PATH", "").split(os.pathsep):
+       try:
+           os.add_dll_directory(p)
+       except OSError:
+           pass
+
+
+set_dll_search_path()
 
 # parse arguments
 if len(sys.argv) == 3:
@@ -43,9 +58,11 @@ output_fn = pcb_svg_file + "_cairo.png"
 
 ### convert SVG to PNG for mathplot import 
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-os.environ['path'] += r';' + dir_path + '\libs'
-os.environ['path'] += r';C:\\Program Files\\UniConvertor-2.0rc5\\dlls'
+# dir_path = os.path.dirname(os.path.realpath(__file__))
+# os.environ['path'] += r';' + dir_path + '\libs'
+# os.environ['path'] += r';' + dir_path
+os.environ['path'] += r';C:/Program Files/UniConvertor-2.0rc5/dlls'
+set_dll_search_path()
 
 # import cairo only after path is complete
 import cairosvg
