@@ -32,5 +32,7 @@ You your printer options, you can adjust multiple pages on a A4 pages if you wan
 
 Each page is for a specific component (same footprint, same type, same value).
 
+Check example folder.
+
 Example :
 ![image](https://user-images.githubusercontent.com/11454444/161437782-1039b5b7-5b72-41a5-b965-9d52ad39bddf.png)
